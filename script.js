@@ -23,8 +23,9 @@ window.addEventListener("load", function () {
         planetSelection.image
       );
 
-      formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+      // formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass);
 
       // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     });
+  formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass);
 });

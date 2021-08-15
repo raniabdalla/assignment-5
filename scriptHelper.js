@@ -34,18 +34,22 @@ function validateInput(testInput) {
   }
 }
 
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+function formSubmission(document, pilot, copilot, fuelLevel, cargoLevel) {
   const faultyItems = document.getElementById("faultyItems");
   const launchStatus = document.getElementById("launchStatus");
   const pilotStatus = document.getElementById("pilotStatus");
   const copilotStatus = document.getElementById("copilotStatus");
   const fuelStatus = document.getElementById("fuelStatus");
   const cargoStatus = document.getElementById("cargoStatus");
-
   const form = document.qetElementById("launchForm");
+
+  /*if (
+    pilotName.value !== "" &&
+    copilot.value !== "" &&
+    fuelLevel.value !== "" &&
+    cargoLevel.value !== ""
+  ) {}*/
   form.addEventListener("submit", function (event) {
-    list = "hi";
-    console.log(list);
     pilot = document.querySelector("input[name=pilotName]");
     copilot = document.querySelector("input[name=copilotName]");
     fuelLevel = document.querySelector("input[name=fuelLevel]");
