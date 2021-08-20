@@ -1,3 +1,5 @@
+//const { validateInput } = require("./scriptHelper");
+
 // Write your JavaScript code here!
 
 //const { addDestinationInfo } = require("./scriptHelper");
@@ -22,10 +24,14 @@ window.addEventListener("load", function () {
         planetSelection.moons,
         planetSelection.image
       );
+      let pilot = document.querySelector("input[name=pilotName]");
+      let copilot = document.querySelector("input[name=copilotName]");
+      let fuelLevel = document.querySelector("input[name=fuelLevel]");
+      let cargoLevel = document.querySelector("input[name=cargoMass]");
+      let list = document.getElementById("faultyItems");
 
-      // formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass);
+      formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
 
       // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     });
-  formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass);
 });
